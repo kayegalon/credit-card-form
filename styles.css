@@ -1,0 +1,138 @@
+:root {
+	--color-primary-brandeis-blue: #0072fa;
+	--color-primary-white-smoke: #f6f6f6;
+	--color-primary-light-gray: #d1d1d1;
+	--color-primary-armadillo: #4a4a4a;
+	--color-gradient-deep-cove: #020d3d;
+	--color-gradient-mike-blue: #0b2f73;
+	--color-gradient-java: #278993;
+	--font-size-main: 22px;
+	--font-size-small: 14px;
+}
+
+@font-face {
+	font-family: scp;
+	src: url(Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf);
+	font-weight: 400;
+}
+
+body {
+	font-family: scp;
+	font-size: var(--font-size-main);
+	display: flex;
+	flex-direction: column;
+}
+
+#credit-card {
+	border: 1px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 8px var(--color-primary-light-gray);
+	width: 23rem;
+	height: 15rem;
+	margin: 0 auto;
+	padding: 2rem;
+	background: linear-gradient(
+		var(--color-gradient-java),
+		var(--color-gradient-mike-blue),
+		var(--color-gradient-deep-cove)
+	);
+	color: var(--color-primary-white-smoke);
+	text-align: center;
+	z-index: 1;
+}
+
+.logos, .card-number, .card-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.holder, .expiry {
+	display: flex;
+	flex-direction: column;
+	line-height: 0;
+	text-align: left;
+}
+
+.card-number {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.title {
+	font-size: var(--font-size-small);
+	color: var(--color-primary-armadillo);
+	margin-bottom: 0;
+}
+
+#credit-card-form {
+	border: 1px solid;
+	border-radius: 10px;
+	border-color: var(--color-primary-light-gray);
+	box-shadow: 5px 5px 8px var(--color-primary-light-gray);
+	width: 50rem;
+	height: 25rem;
+	margin-top: -10rem;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: -3;
+	padding-top: 13rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	color: var(--color-primary-armadillo);
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.date-cvv, .expiration-date {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type="submit"] {
+	margin-top: .5rem;
+	background-color: var(--color-primary-brandeis-blue);
+	color: white;
+	font-size: var(--font-size-main);
+	font-family: scp;
+}
+
+input, select {
+	padding: .5rem;
+	border: 1px solid;
+	border-radius: 5px;
+	border-color: var(--color-primary-light-gray);
+	font-size: var(--font-size-main);
+	font-family: scp;
+}
+
+select {
+	padding-right: 10rem;
+	margin-right: 2rem;
+}
+
+input[type="submit"]:active {
+	background-color: var(--color-primary-white-smoke);
+	border-color: var(--color-primary-brandeis-blue);
+}
+
+@media (max-width: 800px) {
+	#credit-card-form {
+		width: 414px;
+		height: 500px;
+	}
+	
+	select {
+		padding-right: 7.5rem;
+	}
+	
+	.date-cvv {
+		display: flex;
+		flex-direction: column;
+	}
+}

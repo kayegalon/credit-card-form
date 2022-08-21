@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Credit Card Form</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div id="credit-card">
+			<div class="logos">
+				<img src="cc-logo.png">
+				<img src="visa-logo.png">
+			</div>
+			<div class="card-number">
+				<p>4242</p>
+				<p>****</p>
+				<p>****</p>
+				<p>4242</p>
+			</div>
+			<div class="card-info">
+				<div class="holder">
+					<p class="title">Card Holder</p>
+					<p class="name">CSABA KISSI</p>
+				</div>
+				<div class="expiry">
+					<p class="title">Expires</p>
+					<p class="date">02/23</p>
+				</div>
+			</div>
+		</div>
+		<form id="credit-card-form" action="">
+			<label for="card-number">Card Number
+				<input id="card-number" type="text"></input>
+			</label>
+			<label for="card-holder">Card Holder
+				<input id="card-holder" type="text"></input>
+			</label>
+			<div class="date-cvv">
+				<label for="expiration-date">Expiration Date
+					<div class="expiration-date">
+						<select id="expiration-date">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+						</select>
+						<select id="expiration-year">
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+						</select>
+					</div>
+					
+				</label>
+				<label for="cvv">CVV
+					<input id="cvv" type="number"></input>
+				</label>
+			</div>
+			<input type="submit"></input>
+		</form>
+	</body>
+</html>
