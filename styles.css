@@ -136,3 +136,9 @@ input[type="submit"]:active {
 		flex-direction: column;
 	}
 }
+
+@media (max-width: 414px) {
+	#credit-card-form {
+		width: 400px;
+	}
+}
